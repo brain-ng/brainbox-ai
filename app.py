@@ -16,7 +16,7 @@ except:
     st.stop()
 
 # 3. INIT GEMINI MODEL
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # 4. SESSION STATE FOR CHAT HISTORY - MEMORY
 if "messages" not in st.session_state:
