@@ -49,15 +49,3 @@ if prompt := st.chat_input("Ask BrainBox anything..."):
             answer = response.text
             st.markdown(answer)
             st.session_state.messages.append({"role": "assistant", "content": answer})
-
-    # 8. GENERATE ANSWER WITH SPINNER
-    with st.chat_message("assistant"):
-        with st.spinner("BrainBox dey cook the answer..."):
-            try:
-                response = model.generate_content(brainbox_prompt)
-                answer = response.text
-                st.markdown(answer)
-                # Save to chat history for memory
-                st.session_state.messages.append({"role": "assistant", "content": answer})
-            except Exception as e:
-                st.error("E be like say network shake. Try again.")
