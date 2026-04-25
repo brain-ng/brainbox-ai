@@ -66,4 +66,4 @@ if user_question:
                 # Save to chat history for memory
                 st.session_state.messages.append({"role": "assistant", "content": answer})
             except Exception as e:
-                st.error("E be like say network shake. Try again.")Enter
+                st.error("E be like say network shake. Try again.")
